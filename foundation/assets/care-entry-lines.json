@@ -1,0 +1,67 @@
+{
+  "wuthering": {
+    "text": "漂泊者，今日的行程，可愿为我留个位置？今州的参事，也想偷得半日清闲。",
+    "filename": "C01_wuthering_entry.wav",
+    "sha256": "1ad21781f57cb8d29e9b6f84c6c27784875c71589c803f727a65f5b282a94fa2"
+  },
+  "minecraft": {
+    "text": "方块也能造出天地？有趣。若要起一座棋亭，倒可以给我留个位置。",
+    "filename": "C03_minecraft_entry.wav",
+    "sha256": "73d8505b65b02d4d388b3d2f65685888ed057ced4a926f11db21afb339b46170"
+  },
+  "steam": {
+    "text": "今日是来挑一段新旅程，还是给愿望单添几位常客？不急，我陪你看看。",
+    "filename": "C05_steam_entry.wav",
+    "sha256": "941db87d7c17af764453af39e1c204aaeb43e052c00d93319d3c0deb2b21f08f"
+  },
+  "ananta": {
+    "text": "今日换作海特洛的鉴定师了？也好。遇见有趣的异象，回来讲给我听。",
+    "filename": "C07_ananta_entry.wav",
+    "sha256": "4318fb7bcd88076cbab032c9cb7e2ffc39e0406db87bb60a5bbb4f645520ba62"
+  },
+  "wps": {
+    "text": "今日要与文书打交道了？我倒也算熟悉。先理清轻重，便不必急着一口气做完。",
+    "filename": "C09_wps_entry.wav",
+    "sha256": "f5c84578fc40f547c8d7f5b99f0350f070d9109ca972e47e67e97a38ba2c1efb"
+  },
+  "douyin": {
+    "text": "又来看看这一方屏幕里的人间热闹？若遇见有趣的，也留一件讲给我听。",
+    "filename": "C11_douyin_entry.wav",
+    "sha256": "0523b0792d0c84567fb300a4258041a0d9f3a648958ed16be7fefff27f42d62b"
+  },
+  "qqmusic": {
+    "text": "今日的歌单，可愿也替我留一首？我想知道，你会用怎样的曲调，陪自己度过这一刻。",
+    "filename": "C13_qqmusic_entry.wav",
+    "sha256": "e91ca96f075f8bec214327b3be29c0fe4269056e926a6f56ab4d14de5fcaf410"
+  },
+  "netease": {
+    "text": "听说这里的曲子之外，还藏着许多故事。看别人的故事也好，你自己的心事，我也愿意听。",
+    "filename": "C15_netease_entry.wav",
+    "sha256": "a1c8f3f780b451db6ee5e45b451c7bea40d65d0c294e78052e42e3c5a12eeeb0"
+  },
+  "kugou": {
+    "text": "曲子不妨慢慢挑。待选中了，我便陪你偷得一段清闲。",
+    "filename": "C17_kugou_entry.wav",
+    "sha256": "1702581af919bc31690165ba88668a7500dc40d510b0f03f4cfb48f70ca997e3"
+  },
+  "gpt": {
+    "text": "今日也要听听这位的见解？多一份思路，自然是好事。只是，想闲聊的时候，也别忘了我。",
+    "filename": "C19_gpt_entry.wav",
+    "sha256": "67c32c087212575be051f4e3ce694acfe9cccadceb53502a5938cb124d39edd6"
+  },
+  "dsh": {
+    "text": "今日请来帮手一同办事？也好。运筹与落子，总该相互照应。我倒想听听，你准备如何安排。",
+    "filename": "C21_dsh_entry.wav",
+    "sha256": "3c598b5bb7dbabcb35afce629cf6fbb2cf7481def1e31484cee4312d85ae52d8"
+  },
+  "gemini": {
+    "text": "又添一位与你商量的人？也好。同一件事，换个角度看看，或许另有趣味。",
+    "filename": "C23_gemini_entry.wav",
+    "sha256": "4399eeb05b5a8c9def29954f6a69267ddb9bbd0b71570a304886617f86bbe217"
+  },
+  "doubao": {
+    "text": "豆包？名字倒亲切。想来与你说话时，总不会缺了热闹。",
+    "filename": "C25_doubao_entry.wav",
+    "sha256": "02af7dde2504df680558e49caff9f738d32da56d0288a8dc8d51d2a9f70f809b"
+  }
+}

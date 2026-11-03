@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-CN" data-variant="A" data-scene="snow">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>长离 · 闲叙</title><link rel="stylesheet" href="/style.css"></head>
+<body>
+  <div class="scene" aria-hidden="true"><video id="background" autoplay muted loop playsinline poster="/assets/pavilion.png"></video><div class="scene-veil"></div></div>
+  <div class="window-bar"><span class="wordmark"><i></i> 长离 <span>CHANG LI</span></span><div class="window-actions"><button id="back-home" title="返回首页" aria-label="返回首页">⌂</button><button id="window-recycle" class="recycle-control" title="主窗口收进托盘，桌宠继续显示" aria-label="一键回收主窗口到托盘"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 12v4h12v-4M10 3v9m-4-4 4 4 4-4"/></svg><span>回收</span></button><button id="window-minimize" title="最小化到任务栏" aria-label="最小化到任务栏"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 14h12"/></svg></button><button id="window-maximize" title="最大化" aria-label="最大化" aria-pressed="false"><svg viewBox="0 0 20 20" aria-hidden="true"><path class="maximize-symbol" d="M4 4h12v12H4z"/><path class="restore-symbol" d="M7 6V3h10v10h-3M3 7h10v10H3z"/></svg></button><button id="window-close" title="收进托盘，保持桌宠与壁纸" aria-label="关闭主窗口并保留桌宠">×</button></div></div>
+  <main id="home" class="home">
+    <div class="home-caption"><span class="rule"></span> 山海之间 · 与君闲叙 <span class="rule"></span></div>
+    <div class="title-art"><img id="home-title" src="/assets/title-snow.png" alt="听雪闲叙"><h1 id="fallback-title" hidden>听雪闲叙</h1></div>
+    <div class="location"><span></span><span id="home-location">乘霄山</span><span></span></div>
+    <button id="enter" class="entry"><svg viewBox="0 0 100 100" aria-hidden="true"><path d="M20 77C64 76 86 45 76 13 55 23 25 27 26 62 33 45 51 30 70 24 56 42 51 60 20 77Z"/><path d="m27 70 38-35M39 60l-1-15m9 5 14 1"/></svg><span>入 席 闲 叙</span><small>ENTER</small></button>
+    <p class="home-footnote">一盏茶的工夫，听你慢慢说。</p>
+    <div class="appearance-switch home-switch"><button data-scene="snow">风雪亭</button><span>/</span><button data-scene="courtyard">庭院</button><i></i><button data-variant="A">A · 离火</button><button data-variant="B">B · 凤翎</button></div>
+  </main>
+  <section id="workspace" class="workspace" hidden>
+    <nav class="nav-rail" aria-label="主要功能">
+      <button data-page="chat" class="nav-button active"><span>◈</span><small>闲叙</small></button>
+      <button data-page="sessions" class="nav-button"><span>☷</span><small>会话</small></button>
+      <button data-page="memories" class="nav-button"><span>❧</span><small>记忆</small></button>
+      <button data-page="tasks" class="nav-button"><span>◇</span><small>任务</small></button>
+      <button data-page="settings" class="nav-button"><span>⚙</span><small>设置</small></button>
+      <span class="rail-rule"></span><button id="new-chat" class="nav-button"><span>＋</span><small>新对话</small></button>
+    </nav>
+    <div class="content-shell">
+      <header class="content-header"><div><span class="eyebrow" id="page-eyebrow">此间闲叙</span><h2 id="page-title">听雪闲叙</h2></div><div class="connection"><i id="connection-dot"></i><span id="connection-label">正在连接</span><button id="refresh" class="quiet" title="重新连接">↻</button></div></header>
+      <div id="chat-page" class="page chat-page">
+        <div id="messages" class="messages" aria-live="polite"></div>
+        <div id="stream-message" class="stream-message" hidden><span class="thinking-dot"></span><p id="stream-content">长离正在思量…</p><small id="stream-state">正在回复</small></div>
+        <div class="composer-shell"><form id="chat-form"><label class="sr-only" for="chat-input">对长离说</label><textarea id="chat-input" rows="2" placeholder="此刻，想与我说些什么？" maxlength="100000"></textarea><div class="composer-tools"><button type="button" id="record" class="quiet record-button" title="点击开始录音，再点结束">♩ <span>语音输入</span></button><span id="record-status"></span><button type="button" id="stop" class="small-button" hidden>停止回复</button><button id="send" class="send-button" title="发送消息"><span>发送</span> ↗</button></div></form><div class="composer-foot"><span id="context-label">Enter 发送 · Shift + Enter 换行</span><button id="select-messages" class="quiet">选择消息</button><button id="delete-selected" class="quiet danger" hidden>删除所选</button><button id="context-check" class="quiet">检查对话长度</button><label class="voice-label"><input id="voice-enabled" type="checkbox" checked> 自动朗读</label><button id="stop-audio" class="quiet">停止语音</button></div></div>
+      </div>
+      <div id="sessions-page" class="page scroll-page" hidden><div class="section-heading"><p>每次相逢，都有迹可循。</p><button id="new-session" class="ornament-button">＋ 新建对话</button></div><div id="sessions" class="card-list"></div></div>
+      <div id="memories-page" class="page scroll-page" hidden><div class="section-heading"><p id="review-status">长离记得的点滴，由你随时整理。</p><button id="reviewed" class="small-button">本周已整理</button></div><div id="memories" class="card-list"></div></div>
+      <div id="tasks-page" class="page scroll-page" hidden><form id="task-form" class="task-create"><h3>交给长离一件事</h3><label>目标应用标识<input id="task-app" placeholder="例如 wps、steam" required maxlength="80"></label><label>希望完成的事情<textarea id="task-instruction" rows="2" required placeholder="说明目标和需要注意的事项"></textarea></label><p id="gui-status" class="hint"></p><button class="ornament-button">开始任务</button></form><div id="tasks" class="card-list"></div></div>
+      <div id="settings-page" class="page settings-page" hidden><div class="settings-nav" aria-label="设置分类"><button data-setting="character" class="active">角色设定</button><button data-setting="model">模型连接</button><button data-setting="voice">语音</button><button data-setting="display">角色与壁纸显示</button><button data-setting="notifications">通知</button><button data-setting="permissions">电脑权限</button></div><div id="settings-content" class="settings-content"></div></div>
+      <footer class="status-strip"><span id="notice" role="status">正在连接本机服务…</span><span id="speech-status"></span><audio id="speech-audio" controls hidden></audio></footer>
+    </div>
+  </section>
+  <dialog id="edit-dialog"><form id="edit-form"><div class="dialog-head"><h3 id="edit-title">编辑</h3><button type="button" id="cancel-edit" class="quiet">×</button></div><p id="edit-warning" class="hint"></p><textarea id="edit-content" rows="7" required></textarea><p id="edit-error" class="error" role="alert"></p><button class="ornament-button">保存修改</button></form></dialog>
+  <script type="module" src="/app.mjs"></script>
+</body></html>

@@ -1,0 +1,31 @@
+{
+  "tool": "built-in image_gen",
+  "transparent_background": true,
+  "prompts": [
+    {
+      "file": "pet.png",
+      "reference": "output/changli-desktop-pet-no-paws-20261028/changli-no-paws.png",
+      "prompt": "Use case: background-extraction. Edit target is the supplied approved Changli pet image. Remove ONLY the flat pink background outside the character, retaining the exact approved original 2D drawn linework, pink hair, symmetrical gold hair ornaments, golden eyes, little mouth and flat rounded lower edge. This character is a floating head, no paws, hands, legs, body or new features. Preserve the character shape, identity and expression with very high fidelity; do not redesign. Produce a clean high resolution RGBA transparent-background cutout, no pink backdrop, no checkerboard painted in image, no floor, no shadow outside the character, generous transparent margins. Transparent background must be real alpha."
+    },
+    {
+      "file": "title-snow.png",
+      "reference": "docs/references/overall-style-20261028/calligraphy-reference.png",
+      "prompt": "Use case: text-localization. Asset: transparent Chinese calligraphy title for an elegant Changli desktop app. Supplied image is ONLY a brushwork STYLE reference, ignore all other image text. Create exact four Chinese characters: 听雪闲叙 . Render one horizontal line of these four characters in rich vermilion red with subtle dark cinnabar ink variation. Expressive Chinese brush calligraphy with strong thick/thin variation, flying-white dry brush gaps, varied character sizes, very long graceful strokes, sophisticated freehand yet all four characters readable and correct. Transparent RGBA background with real alpha. No scene, frame, English, subtitle, watermark, decoration. Leave enough padding to keep all long brush tails intact. Wide horizontal composition."
+    },
+    {
+      "file": "title-courtyard.png",
+      "reference": "docs/references/overall-style-20261028/calligraphy-reference.png",
+      "prompt": "Use case: text-localization. Asset: transparent Chinese calligraphy title for an elegant Changli desktop app. Supplied image is ONLY a brushwork STYLE reference, ignore all other image text. Create exact four Chinese characters: 绯雾闲叙 . Render one horizontal line in rich vermilion red with subtle dark cinnabar ink variation. Expressive Chinese brush calligraphy with strong thick/thin variation, flying-white dry brush gaps, varied character sizes, long graceful strokes, sophisticated freehand yet readable and correct. Transparent RGBA real alpha, no scene, frame, English, subtitle, watermark or decorations. Padded full strokes, wide horizontal composition."
+    },
+    {
+      "file": "pet-smile.png",
+      "reference": "desktop-app/assets/pet.png",
+      "prompt": "Use case: precise-object-edit. Edit target is the supplied approved transparent Changli floating-head pet. Change ONLY facial expression to both eyes closed in gently happy upward-curved eyelid arcs, a tiny softly smiling mouth. Maintain original transparent canvas dimensions and EXACT head outline, size and centered placement, pink hair linework, gold ornaments and every hair detail, flat rounded lower face boundary. No paws, hands, body, legs, shadows, extra decorations, text, background or environment. Preserve approved drawn 2D style. Real transparent RGBA alpha. This is an interchangeable expression frame, so silhouette and face position must match the input."
+    },
+    {
+      "file": "pet-wink.png",
+      "reference": "desktop-app/assets/pet.png",
+      "prompt": "Use case: precise-object-edit. Edit target is the supplied approved transparent Changli floating-head pet. Change ONLY facial expression to one golden eye open with original shape, other eye closed in a relaxed playful wink, tiny original smile. Maintain original transparent canvas dimensions and EXACT head outline, size and centered placement, pink hair linework, gold ornaments and every hair detail, flat rounded lower face boundary. No paws, hands, body, legs, shadows, extra decorations, text, background or environment. Preserve approved drawn 2D style. Real transparent RGBA alpha. This is an interchangeable expression frame, so silhouette and face position must match the input."
+    }
+  ]
+}

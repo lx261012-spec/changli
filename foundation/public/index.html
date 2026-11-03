@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>智能底基 · 本机测试台</title>
+  <link rel="stylesheet" href="/style.css">
+  <script type="module" src="/app.js"></script>
+</head>
+<body>
+  <header>
+    <div><h1>智能底基 · 本机测试台</h1><p>长离与爱弥斯各自独立，仅共享用户基础资料。这是功能测试台。</p></div>
+    <button id="disconnect" type="button" hidden>退出本机连接</button>
+  </header>
+  <main>
+    <p id="error" role="alert"></p>
+    <p id="notice" role="status" aria-live="polite"></p>
+    <section id="connection" aria-labelledby="connection-title">
+      <h2 id="connection-title">连接本机服务</h2>
+      <p>启动器会自动带入访问令牌。若没有自动连接，请填写本机数据目录 access-token 文件中的令牌。</p>
+      <form id="token-form" class="row">
+        <label for="token">本机访问令牌</label><input id="token" type="password" autocomplete="off" required spellcheck="false">
+        <button type="submit">连接</button>
+      </form>
+      <p class="hint">这里填写本机访问令牌，不是模型 API Key。令牌仅保留在当前浏览器会话。</p>
+    </section>
+    <div id="workspace" hidden>
+      <section aria-label="连接状态" class="status-panel">
+        <div class="row"><label for="character">当前独立角色</label><select id="character"><option value="changli">长离</option><option value="aimisi">爱弥斯</option></select><button id="refresh" type="button">刷新</button></div>
+        <form id="provider-form" class="row"><label for="provider">聊天通道</label><select id="provider"><option value="openai">OpenAI · GPT-6.1 Sol</option><option value="deepseek">DeepSeek · V4.1-Flash</option><option value="gemini">Gemini · Gemini Flash</option></select><button type="submit">切换到所选通道</button></form>
+        <p class="hint">默认 GPT-6.1 Sol，可手动切换 Gemini 或 DSH 中的同款 DeepSeek-V4.1-Flash 模型（经 DeepSeek API 调用）。2026-10-28 官方 deepseek-flash 对应1017，是滚动别名，非永久锁版。各角色保留之后手动选择的通道，不自动切换。</p>
+        <p id="capabilities" role="status"></p>
+        <p id="startup-suggestion"></p>
+        <button id="retry-model" type="button" hidden>额度恢复后重试模型</button>
+      </section>
+      <div class="columns">
+        <section class="chat" aria-labelledby="chat-title">
+          <h2 id="chat-title">文字聊天与历史</h2>
+          <div class="row"><label for="session">会话</label><select id="session"></select><button id="new-session" type="button">新建会话</button><button id="delete-session" type="button" class="danger">删除会话</button></div>
+          <div class="context"><p id="context-status" aria-live="polite">上下文长度尚未读取。</p><progress id="context-meter" aria-label="对话上下文使用比例" max="1" value="0" hidden></progress><button id="check-context" type="button">检查上下文长度</button></div>
+          <p class="hint">接近上限会提醒；达到上限时暂停生成，由你删减或新开会话。可选择回复生成后是否自动播放语音，文字先显示；6 秒与文音同步目标尚待优化和实测。</p>
+          <section aria-labelledby="speech-title">
+            <h3 id="speech-title">长离聊天语音</h3>
+            <label class="selection"><input id="speech-enabled" type="checkbox" checked aria-describedby="speech-setting-hint">回复生成后自动播放语音</label>
+            <p id="speech-setting-hint" class="hint">开启后自动合成并播放新回复；关闭后仅显示文字，仍可手动播放或重试语音。设置保存在当前浏览器，刷新或重新打开页面会保留。</p>
+            <button id="stop-speech" type="button">只停止语音</button>
+            <p id="speech-status" role="status" aria-live="polite">首次合成会加载专属权重；语音失败时文字聊天继续。</p>
+            <audio id="speech-audio" controls preload="none" aria-label="长离合成语音播放器"></audio>
+            <details><summary>输入文字试读（无需聊天模型）</summary>
+              <form id="speech-test-form"><label for="speech-text">试读文字</label><textarea id="speech-text" rows="2" maxlength="2000" required>你来了。今日可还顺利？</textarea><button id="speech-test-button" type="submit">合成并试听</button></form>
+            </details>
+          </section>
+          <div id="messages" aria-label="当前会话消息"></div>
+          <button id="delete-messages" type="button" class="danger">删除勾选消息</button>
+          <section id="stream-panel" aria-label="临时回复内容" hidden><h3 id="stream-title">正在回复</h3><p id="latency"></p><pre id="stream" aria-live="polite" aria-atomic="false"></pre></section>
+          <form id="chat-form">
+            <label for="chat-input">发送消息</label><textarea id="chat-input" rows="4" maxlength="32000" placeholder="聊聊近况，或说明你的需求" required></textarea>
+            <div class="row"><button id="send" type="submit">发送</button><button id="stop" type="button">停止当前回复 / 打断任务</button><span id="chat-state" role="status" aria-live="polite"></span></div>
+          </form>
+        </section>
+        <aside>
+          <section id="care-panel" aria-labelledby="care-title">
+            <h2 id="care-title">主动关心联调</h2>
+            <p class="hint">这里验证接听、当前会话与语音衔接；桌宠的实际呈现另行接入。</p>
+            <p data-care="status" role="status"></p>
+            <div data-care="bubble" role="group" aria-label="长离的主动关心邀请" hidden>
+              <p>长离有话想和你说</p>
+              <progress data-care="countdown" max="10000" value="10000" aria-label="邀请剩余时间"></progress>
+              <span data-care="seconds"></span>
+              <div class="row"><button data-care="reject" type="button">拒绝</button><button data-care="accept" type="button">接听</button></div>
+            </div>
+          </section>
+          <section aria-labelledby="settings-title">
+            <h2 id="settings-title">用户资料与角色设定</h2>
+            <details><summary>语音输入与录音快捷键</summary>
+              <form id="recording-shortcut-form">
+                <label for="recording-shortcut">当前角色的录音快捷键</label>
+                <input id="recording-shortcut" type="text" readonly placeholder="点击此处，再按组合键" aria-describedby="recording-shortcut-help">
+                <p id="recording-shortcut-help" class="hint">支持 Ctrl、Alt、Shift 搭配字母、数字或功能键，请避开系统常用快捷键。保存后供桌宠录音入口使用；当前仅保存设置，全局录音触发尚待桌宠与主程序接入。识别结果先允许修改，点击发送才发出。</p>
+                <div class="row"><button type="submit">保存录音快捷键</button><button id="clear-recording-shortcut" type="button">清除快捷键</button></div>
+                <p id="recording-shortcut-status" role="status" aria-live="polite"></p>
+              </form>
+            </details>
+            <details><summary>角色设定（用户维护）</summary><form id="character-form"><label for="instructions">当前角色的规则、口吻与设定</label><textarea id="instructions" rows="6"></textarea><button type="submit">保存当前角色设定</button></form></details>
+            <details><summary>共享用户资料（角色只读）</summary><p class="hint">只有你可修改；这份基础资料可供两个角色读取。角色聊天和自动记忆仍分别保存。</p><form id="profile-form"><label for="profile">用户资料 JSON 对象</label><textarea id="profile" rows="7" spellcheck="false"></textarea><button type="submit">保存用户资料</button></form></details>
+          </section>
+          <section aria-labelledby="memory-title">
+            <h2 id="memory-title">当前角色的自动记忆</h2>
+            <p id="review-status" role="status"></p>
+            <p class="hint">每周提醒，由你勾选删除；不会按时间自动清空。修改或删除源对话会同步清理依赖记忆。</p>
+            <div id="memories"></div>
+            <div class="row"><button id="delete-memories" type="button" class="danger">删除勾选记忆</button><button id="reviewed" type="button">本周已整理</button></div>
+          </section>
+        </aside>
+      </div>
+      <section aria-labelledby="tasks-title">
+        <h2 id="tasks-title">电脑任务与授权</h2>
+        <p id="gui-status"></p>
+        <p class="hint">普通游戏 / 应用能力可默认允许。涉及提交的动作按能力确认；原始坐标、按键无法可靠判断含义时需逐次审阅。暂停、编辑对话或重新生成不能撤销已发生的电脑操作。</p>
+        <form id="task-form"><div class="row"><label for="app-id">应用标识</label><input id="app-id" value="notepad" maxlength="80" pattern="[a-zA-Z0-9][a-zA-Z0-9._-]{0,79}" required></div><label for="task-instruction">任务要求</label><textarea id="task-instruction" rows="3" maxlength="16000" placeholder="例如：在记事本输入一段文字，先不要保存" required></textarea><button type="submit">开始电脑任务</button></form>
+        <div id="tasks" aria-live="polite"></div>
+        <h3>当前角色的“始终允许”</h3><div id="grants"></div>
+      </section>
+      <p class="hint">API 密钥仅由本机服务读取环境配置；本页面不收集或展示密钥。本台提供本地语音连接；人物主题、系统壁纸及角色显示仍由对应模块接入。</p>
+    </div>
+  </main>
+  <dialog id="edit-dialog" aria-labelledby="edit-title">
+    <form id="edit-form">
+      <h2 id="edit-title">编辑内容</h2><p id="edit-warning"></p><p id="edit-error" role="alert"></p>
+      <label for="edit-content">修改后的文字</label><textarea id="edit-content" rows="9" required></textarea>
+      <div class="row"><button id="save-edit" type="submit">保存</button><button id="cancel-edit" type="button">取消</button></div>
+    </form>
+  </dialog>
+</body>
+</html>

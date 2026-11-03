@@ -1,0 +1,160 @@
+{
+  "note": "Resources retained locally, not included in the source snapshot; restore the listed relative paths before running the full desktop experience.",
+  "resources": [
+    {
+      "path": "desktop-app/assets/changli-avatar.jpg",
+      "bytes": 222237,
+      "sha256": "1e8cf1c987b05d69dd8f12f69f5433b1ed85035949f94a94c9e77946e15a9c3b"
+    },
+    {
+      "path": "desktop-app/assets/click.wav",
+      "bytes": 15038,
+      "sha256": "59ee9af581a675c579ccae085fe339774e556756643f4dfce477348a0b3318a5"
+    },
+    {
+      "path": "desktop-app/assets/courtyard.mp4",
+      "bytes": 4283728,
+      "sha256": "462e44d64881b8f42e7cdffed8f6dc09821239181405780538b44097141f2d43"
+    },
+    {
+      "path": "desktop-app/assets/courtyard.png",
+      "bytes": 3054231,
+      "sha256": "aa6210f2f802d63006280b562cf69d3950a0011aedd6db06c3d44e93fc23f5c1"
+    },
+    {
+      "path": "desktop-app/assets/greeting.wav",
+      "bytes": 206124,
+      "sha256": "34f3a8fb270ec65f5ea1eee283424d4ead6f0dccad3b1bdf3271480eaef9f9d0"
+    },
+    {
+      "path": "desktop-app/assets/pavilion.mp4",
+      "bytes": 7863378,
+      "sha256": "1ba272cd26a80cc70f52039d76eae1669e0f679de572c5a18f5ec9daa7fcffe6"
+    },
+    {
+      "path": "desktop-app/assets/pavilion.png",
+      "bytes": 4245464,
+      "sha256": "9d11689d222b4127263889ae99124f91d1d83ba44e2bd4c3515a3078fa0775c0"
+    },
+    {
+      "path": "desktop-app/assets/pet-idle-poster.png",
+      "bytes": 1102339,
+      "sha256": "2dfca20d22834d26e8053b150c352a53044dbbd396427b23e88af63325fd9ac2"
+    },
+    {
+      "path": "desktop-app/assets/pet-idle.webm",
+      "bytes": 100285629,
+      "sha256": "48f241aac1917b3c5a7c29d004df6d92ce4ff5e6bc4a4d47142c56082a5940d1"
+    },
+    {
+      "path": "desktop-app/assets/pet-smile.png",
+      "bytes": 934768,
+      "sha256": "dcd9daf639b8c8b9c2c0d06198f136d820feebb33c19dcf3cf0ddb063a22a2ed"
+    },
+    {
+      "path": "desktop-app/assets/pet-wink.png",
+      "bytes": 926397,
+      "sha256": "113792a89a6b2f7cc9ad3b85117a66abd5e78151f13916fb8d95423cb4572fe7"
+    },
+    {
+      "path": "desktop-app/assets/pet.png",
+      "bytes": 929654,
+      "sha256": "c77f52ffc9bece61b3955acd07f99931059c95bbf4643e6a90430fead99425c7"
+    },
+    {
+      "path": "desktop-app/assets/rover-avatar.jpg",
+      "bytes": 533367,
+      "sha256": "e398ae586996328d1e61887332cd63d9350c7e51c0ad7ddc2fd656a1bbf5f90a"
+    },
+    {
+      "path": "desktop-app/assets/title-courtyard.png",
+      "bytes": 1012462,
+      "sha256": "05022b0f2817c1ae9fb370c40d813462a6da79173733433119cada4b19236c26"
+    },
+    {
+      "path": "desktop-app/assets/title-snow.png",
+      "bytes": 759115,
+      "sha256": "f81011b3a041664ff3894712ff1bb23a5dcbab14e339a9830d190c220967cedf"
+    },
+    {
+      "path": "desktop-app/wallpaper/media/chat-sample.wav",
+      "bytes": 206124,
+      "sha256": "34f3a8fb270ec65f5ea1eee283424d4ead6f0dccad3b1bdf3271480eaef9f9d0"
+    },
+    {
+      "path": "desktop-app/wallpaper/media/default-gaze-frame.png",
+      "bytes": 4517549,
+      "sha256": "8ae8e1498b859ffb396d7db112cf8a603431240e12b94a2b568e24470f58a1c8"
+    },
+    {
+      "path": "desktop-app/wallpaper/media/eye-rest-art.png",
+      "bytes": 1556750,
+      "sha256": "2497a00c416f2e2f6bf60628497055b96743d731f0212578a13b8fd61191b84f"
+    },
+    {
+      "path": "desktop-app/wallpaper/media/poster-clean.jpg",
+      "bytes": 577146,
+      "sha256": "4781afc267f45c4eac309c27bc43e7acaefab2065edea77dac56e6f37e6da0f1"
+    },
+    {
+      "path": "desktop-app/wallpaper/media/poster.jpg",
+      "bytes": 576247,
+      "sha256": "48e948f094a217fd5bbb30bff9518c490c804dad4ec49a89489a30fb96506e4a"
+    },
+    {
+      "path": "desktop-app/wallpaper/media/T01.wav",
+      "bytes": 201004,
+      "sha256": "0d96dd3f8816933938f0401f2bb485f6e03ce190e8f6ea314542aa15cbc93eb1"
+    },
+    {
+      "path": "desktop-app/wallpaper/media/T02.wav",
+      "bytes": 216364,
+      "sha256": "e8e18b99365819b0b6456f9b7855b9ec72e7ac9d092898d2846005479e4b2bca"
+    },
+    {
+      "path": "desktop-app/wallpaper/media/T03.wav",
+      "bytes": 293164,
+      "sha256": "9627948d400292c7cc3d919dc3c39c1a7f969df4a359633e99f9bb49ad1d2706"
+    },
+    {
+      "path": "desktop-app/wallpaper/media/T04.wav",
+      "bytes": 229164,
+      "sha256": "63a1608fb7d8770e7b62b1ec2bd069bb9c9b2292a1213db77ebdb3a5324300ed"
+    },
+    {
+      "path": "desktop-app/wallpaper/media/T05.wav",
+      "bytes": 203564,
+      "sha256": "01bad91550ed39742d1bcc7398ec037e5b3d37510bcd2f56834cf7aac942053a"
+    },
+    {
+      "path": "desktop-app/wallpaper/media/T06.wav",
+      "bytes": 234284,
+      "sha256": "98172a586bd59994179c2b02f23f31e7dd0e66cf6c1e400c2c1b1df0826a5ddf"
+    },
+    {
+      "path": "desktop-app/wallpaper/media/T07.wav",
+      "bytes": 226604,
+      "sha256": "703692dbb21bfa2c3fbc2e612b360bf23708c2f886e4bebff09ebbf229a51fa0"
+    },
+    {
+      "path": "desktop-app/wallpaper/media/T08.wav",
+      "bytes": 229164,
+      "sha256": "6212e80bd529c2c7f688358bc6ed2344b29d27a04e0592cc035c8fce4d8201f4"
+    },
+    {
+      "path": "desktop-app/wallpaper/media/T09.wav",
+      "bytes": 203564,
+      "sha256": "2b71c28cd74b09b2d7aa46f1ff845999ca5546d422fd0c64626ff557fefc9854"
+    },
+    {
+      "path": "desktop-app/wallpaper/media/wallpaper-clean.mp4",
+      "bytes": 11570452,
+      "sha256": "04f3774dc735c7d4a96d2879adb1e262073ef2d4d2ef22b042cd4ddb29653baa"
+    },
+    {
+      "path": "desktop-app/wallpaper/media/wallpaper.mp4",
+      "bytes": 16310354,
+      "sha256": "0a554e276122d4516325acaa41f57f0286d5aea6e1247ed6fa938b8a34a72d9e"
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "created": "2026-10-28",
+  "files": [
+    {
+      "name": "changli-avatar.jpg",
+      "bytes": 222237,
+      "sha256": "1e8cf1c987b05d69dd8f12f69f5433b1ed85035949f94a94c9e77946e15a9c3b"
+    },
+    {
+      "name": "character-instructions.txt",
+      "bytes": 7089,
+      "sha256": "cafad872ac93bdbada3ccbf2a58bf35337872fca13a6082f402c0e685f26d4fa"
+    },
+    {
+      "name": "click.wav",
+      "bytes": 15038,
+      "sha256": "59ee9af581a675c579ccae085fe339774e556756643f4dfce477348a0b3318a5"
+    },
+    {
+      "name": "courtyard.mp4",
+      "bytes": 4283728,
+      "sha256": "462e44d64881b8f42e7cdffed8f6dc09821239181405780538b44097141f2d43"
+    },
+    {
+      "name": "courtyard.png",
+      "bytes": 3054231,
+      "sha256": "aa6210f2f802d63006280b562cf69d3950a0011aedd6db06c3d44e93fc23f5c1"
+    },
+    {
+      "name": "greeting.wav",
+      "bytes": 206124,
+      "sha256": "34f3a8fb270ec65f5ea1eee283424d4ead6f0dccad3b1bdf3271480eaef9f9d0"
+    },
+    {
+      "name": "pavilion.mp4",
+      "bytes": 7863378,
+      "sha256": "1ba272cd26a80cc70f52039d76eae1669e0f679de572c5a18f5ec9daa7fcffe6"
+    },
+    {
+      "name": "pavilion.png",
+      "bytes": 4245464,
+      "sha256": "9d11689d222b4127263889ae99124f91d1d83ba44e2bd4c3515a3078fa0775c0"
+    },
+    {
+      "name": "pet-smile.png",
+      "bytes": 934768,
+      "sha256": "dcd9daf639b8c8b9c2c0d06198f136d820feebb33c19dcf3cf0ddb063a22a2ed"
+    },
+    {
+      "name": "pet-wink.png",
+      "bytes": 926397,
+      "sha256": "113792a89a6b2f7cc9ad3b85117a66abd5e78151f13916fb8d95423cb4572fe7"
+    },
+    {
+      "name": "pet.png",
+      "bytes": 929654,
+      "sha256": "c77f52ffc9bece61b3955acd07f99931059c95bbf4643e6a90430fead99425c7"
+    },
+    {
+      "name": "rover-avatar.jpg",
+      "bytes": 533367,
+      "sha256": "e398ae586996328d1e61887332cd63d9350c7e51c0ad7ddc2fd656a1bbf5f90a"
+    },
+    {
+      "name": "title-courtyard.png",
+      "bytes": 1012462,
+      "sha256": "05022b0f2817c1ae9fb370c40d813462a6da79173733433119cada4b19236c26"
+    },
+    {
+      "name": "title-snow.png",
+      "bytes": 759115,
+      "sha256": "f81011b3a041664ff3894712ff1bb23a5dcbab14e339a9830d190c220967cedf"
+    },
+    {
+      "name": "pet-idle.json",
+      "bytes": 420,
+      "sha256": "99b3c39d332876b732c4ed325907cce7d331fbd7b4523cdbe510a20273d12bb9"
+    },
+    {
+      "name": "pet-idle.webm",
+      "bytes": 100285629,
+      "sha256": "48f241aac1917b3c5a7c29d004df6d92ce4ff5e6bc4a4d47142c56082a5940d1"
+    },
+    {
+      "name": "pet-idle-poster.png",
+      "bytes": 1102339,
+      "sha256": "2dfca20d22834d26e8053b150c352a53044dbbd396427b23e88af63325fd9ac2"
+    }
+  ],
+  "updated": "2026-10-29"
+}

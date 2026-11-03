@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>长离 · 舟上听雪</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="preview.css?v=2">
+  <script src="assets.js" defer></script>
+  <script src="app.js?v=5" defer></script>
+<link rel="stylesheet" href="desktop.css"><script src="adapter.js" defer></script></head>
+<body>
+  <header>
+    <div><span class="eyebrow">本地交互预览</span><h1>长离 · 舟上听雪</h1></div>
+    <p>点击人物播放台词；播放中再点即停，再点才播放新句。</p>
+  </header>
+  <main>
+    <div id="stage" class="stage">
+      <video id="wallpaper" autoplay muted loop playsinline preload="auto" poster="media/poster-clean.jpg?v=5" aria-label="舟上雪景视频壁纸"><source src="media/wallpaper-clean.mp4?v=2" type="video/mp4"></video>
+      <canvas id="eyes" width="180" height="120" aria-hidden="true"></canvas>
+      <svg id="zones" viewBox="0 0 1920 1080" aria-label="长离点触区域">
+        <g class="zone body" data-group="shoulder_body" role="button" tabindex="0" aria-label="点击长离肩部或身体，播放对应台词">
+          <path d="M606 403 L687 427 L781 406 L877 442 L907 536 L854 574 L835 658 L860 746 L749 796 L619 762 L633 634 L625 568 L612 535 L584 476 L594 435 Z"/>
+          <text x="744" y="558">肩部／身体</text>
+        </g>
+        <g class="zone head" data-group="head_accessory" role="button" tabindex="0" aria-label="点击长离头部或发饰，播放对应台词">
+          <path d="M595 137 L759 128 L850 221 L849 355 L800 407 L709 423 L614 389 L573 305 L566 215 Z"/>
+          <text x="706" y="217">头部／发饰</text>
+        </g>
+        <g class="zone hand" data-group="hand" role="button" tabindex="0" aria-label="点击长离的手，播放对应台词">
+          <path d="M536 485 L605 474 L638 522 L650 643 L609 689 L573 665 L548 604 Z M937 615 L991 582 L1077 585 L1146 600 L1141 645 L1086 667 L1024 665 L960 699 L917 719 L877 690 L884 661 Z"/>
+          <text x="1034" y="629">手部</text>
+        </g>
+      </svg>
+      <div id="loading" class="loading">正在载入视频…</div>
+    </div>
+    <section class="controls" aria-label="测试控制">
+      <button id="pause" type="button">暂停画面</button>
+      <label><input id="show-zones" type="checkbox">显示点击区域（仅测试）</label>
+      <label><input id="eye-follow" type="checkbox" checked>眼睛跟随（试验）</label>
+      <label><input id="video-sound" type="checkbox">原片声音</label>
+      <label class="volume">台词音量<input id="voice-volume" type="range" min="0" max="1" step="0.05" value="0.85"></label>
+      <span class="divider"></span>
+      <button id="chat-sample" type="button">播放聊天语音样本</button>
+      <button id="stop-voice" type="button">停止语音</button>
+      <button id="fullscreen" type="button">全屏画面</button>
+    </section>
+    <p id="status" role="status" aria-live="polite">可以直接点击人物。背景和右侧人物不触发台词。</p>
+    <details id="eye-detail">
+      <summary>放大眼部检查</summary>
+      <p>沿用原视频眼神，鼠标在头部和上半身附近时小幅跟随；离开或关闭跟随后恢复原视频视线。眨眼沿用视频。</p>
+      <canvas id="eye-zoom" width="720" height="360" aria-label="眼部放大预览"></canvas>
+    </details>
+    <p class="note">当前为交互测试页。正式版壁纸不显示区域标记或这些控件，相关设置统一放进程序的 Agent 设置。聊天按钮仅播现有样本；QQ音乐等可同时发声。</p>
+  </main>
+  <audio id="voice" preload="auto"></audio>
+</body>
+</html>

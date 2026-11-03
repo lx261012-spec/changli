@@ -1,0 +1,10 @@
+{
+  "src": "/assets/pet-idle.webm",
+  "bounds": {"left": 0, "top": 20, "width": 1440, "height": 800},
+  "expressionBounds": {"left": 16, "top": 40, "width": 1408, "height": 748},
+  "eyeRegions": [
+    {"x": 490, "y": 530, "width": 170, "height": 220},
+    {"x": 780, "y": 530, "width": 190, "height": 220}
+  ],
+  "description": "长离动态待机：用户视频动画超分、去背景及水印、静音透明循环"
+}

@@ -1,0 +1,11 @@
+{
+  "name": "changli-desktop",
+  "version": "1.0.0",
+  "description": "长离 · 听雪闲叙",
+  "private": true,
+  "main": "main.cjs",
+  "scripts": {
+    "start": "node scripts/start.cjs",
+    "test:shell": "node --test scripts/shell.test.cjs"
+  }
+}

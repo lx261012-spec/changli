@@ -1,0 +1,67 @@
+{
+  "wuthering": {
+    "text": "索拉里斯的路还长，不必一口气走完。先把目光从屏幕上移开片刻，陪我说说话，可好？",
+    "filename": "C02_wuthering_duration.wav",
+    "sha256": "b4f65978f914b3b4b85e84673ff05103fb428b398887f5c1ff3b26710f585b22"
+  },
+  "minecraft": {
+    "text": "若要下矿，可别径直往脚下挖。我虽惯于用火，也不赞成拿岩浆试身手。先歇一歇，再探路吧。",
+    "filename": "C04_minecraft_duration.wav",
+    "sha256": "bb702e01079f9ed96670887af8c4691f8ad5a5ae327017b18e40e71b83c739ed"
+  },
+  "steam": {
+    "text": "听说这里有句妙论，叫“买了就是玩了”。呵……不过，我还是想听听，哪一段冒险，是你真想亲自走一走的？",
+    "filename": "C06_steam_duration.wav",
+    "sha256": "d8770b83cae63aa9e022e03d9199b4cd29f0297e1ddf3865a60acc50fdfb8553"
+  },
+  "ananta": {
+    "text": "海特洛再多新鲜事，也不急于这一时。鉴定师暂且下班，来陪今州的参事歇一歇，如何？",
+    "filename": "C08_ananta_duration.wav",
+    "sha256": "6466f95e29a775e70f14a9ba3a843925719022a7fa806beb5aa4ec8925e6ba78"
+  },
+  "wps": {
+    "text": "若还在改文稿，记得存一份。至于“最终版”后还要添几个“最终”，歇过这会儿，再慢慢商议。",
+    "filename": "C10_wps_duration.wav",
+    "sha256": "97ddf2ac768c774223e3eade11a62c7dabf697dfe3f2685bc81909a6fc72634b"
+  },
+  "douyin": {
+    "text": "这“再看一个”，倒像永远也走不完的一步。不如这一回，把下一个留给稍后，把这一刻留给自己？",
+    "filename": "C12_douyin_duration.wav",
+    "sha256": "61df59cfd404df698337485228e74ead8cac3672a402e707bb29a89a71d1ec3b"
+  },
+  "qqmusic": {
+    "text": "若有一首想单曲循环的，便留着慢慢听。也让眼睛歇一歇，好曲子不必一直盯着才肯唱。",
+    "filename": "C14_qqmusic_duration.wav",
+    "sha256": "0fe573b82d533791c26729c4ffac08c351e121888c76345951f5ea9dbb44e669"
+  },
+  "netease": {
+    "text": "别人的乐评，可以慢慢看。若有自己的话想说，不必等到写得动人，原样告诉我便好。",
+    "filename": "C16_netease_duration.wav",
+    "sha256": "00491624a3299f3d362e875385868b240b3569124a2748b04c6ab70701c21a73"
+  },
+  "kugou": {
+    "text": "这会儿若只想有些声音相伴，放首喜欢的便好。不必一直找下一首，也给自己留些清闲。",
+    "filename": "C18_kugou_duration.wav",
+    "sha256": "0ff056e6465ad03d1147f55d9fa465416da10b499f4f0ce82a639c21e9fa5b87"
+  },
+  "gpt": {
+    "text": "答案可以多问几遍，你自己的想法，也值得留个位置。若愿意，换我听你说说？",
+    "filename": "C20_gpt_duration.wav",
+    "sha256": "b9f9b829c66838a712859b2426e487abd09029e6a12cb7c9665efb8cf1dc1414"
+  },
+  "dsh": {
+    "text": "事情可以分给帮手，你自己也该得些清闲。若眼下能暂歇，便来陪我坐一会儿。",
+    "filename": "C22_dsh_duration.wav",
+    "sha256": "42d5413a17c08c51ee27456493b716b591557affe46a0639e579e355f705c889"
+  },
+  "gemini": {
+    "text": "别人的见解听过了，也别漏下你自己的心意。最后想走哪条路，我想听你亲口说。",
+    "filename": "C24_gemini_duration.wav",
+    "sha256": "0b15e10a8b029b117ae5d3637bc5de074d411d9d730fc57be39f3dce099481bb"
+  },
+  "doubao": {
+    "text": "若聊过之后，还有什么想不明白的，回来同我说说。我们不急着把话说满。",
+    "filename": "C26_doubao_duration.wav",
+    "sha256": "a5776b75af29b67b9e59509cccb4a9d77f59527af4ffe30b03f3c6b8156bdc1a"
+  }
+}
